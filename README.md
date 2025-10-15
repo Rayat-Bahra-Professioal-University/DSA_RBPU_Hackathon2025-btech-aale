@@ -187,6 +187,6 @@
 
 ## *📚 References*
 
-1. *My Civic by Tyler Technologies – Mobile app platform connecting citizens with city services and feedback systems. [Link]()*
-    1. *Citycare by Baseline – Citizen-centric municipal software for managing requests, sanitation, and municipal operations. [Link]()*
-2. *Urban Smart Citizen Engagement Platforms – Platforms using IoT and AI to improve urban services, citizen engagement, and sustainability. [Link]()*
+1. *My Civic by Tyler Technologies – Mobile app platform connecting citizens with city services and feedback systems. [Link](https://vansh17vansh.pythonanywhere.com/)*
+    1. *Citycare by Baseline – Citizen-centric municipal software for managing requests, sanitation, and municipal operations. [Link](https://vansh17vansh.pythonanywhere.com/)*
+2. *Urban Smart Citizen Engagement Platforms – Platforms using IoT and AI to improve urban services, citizen engagement, and sustainability. [Link](https://vansh17vansh.pythonanywhere.com/)*
