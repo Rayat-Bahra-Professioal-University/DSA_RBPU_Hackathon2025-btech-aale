@@ -411,6 +411,74 @@ nav a:hover {
   background: #f8f9fa;
   color: var(--secondary);
 }
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .steps {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.user-menu {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+}
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    width: 100%;
+    order: 3;
+    margin-top: 1rem;
+  }
+  
+  nav.active {
+    display: block;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+}
 
 /* Hero Section */
 .hero {
