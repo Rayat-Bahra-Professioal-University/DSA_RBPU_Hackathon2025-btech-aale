@@ -311,6 +311,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Other existing event listeners...
 });
+// Handle logout - SIMPLE VERSION
+function handleLogout() {
+    // Clear user data
+    currentUser = null;
+    isAdmin = false;
+    
+    // Clear localStorage
+    localStorage.removeItem("currentUser");
+    localStorage.removeItem("isAdmin");
+    
+    // Update UI
+    showAuthButtons();
+    
+    // Close dropdown menu
+    dropdownMenu.classList.remove("active");
+    
+    // Show success message
+    alert("You have been logged out successfully.");
+}
+
+// User avatar click to toggle dropdown
+userAvatar.addEventListener("click", () => {
+    dropdownMenu.classList.toggle("active");
+});
+
+// Logout button click
+logoutBtn.addEventListener("click", handleLogout);
+
+// Close dropdown when clicking outside
+document.addEventListener("click", (e) => {
+    if (!e.target.closest('.user-dropdown') && dropdownMenu.classList.contains('active')) {
+        dropdownMenu.classList.remove('active');
+    }
+});
 
 // Handle logout
 function handleLogout() {
