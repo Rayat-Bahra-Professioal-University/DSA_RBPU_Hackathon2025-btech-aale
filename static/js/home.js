@@ -172,6 +172,36 @@ function handleSignup(event) {
     // Show success message
     alert("Account created successfully! Welcome to City Care.");
 }
+// Ensure close button works for auth modal
+closeModal.addEventListener("click", () => {
+  authModal.style.display = "none";
+});
+
+// Ensure close button works for admin modal
+closeAdminModal.addEventListener("click", () => {
+  adminModal.style.display = "none";
+});
+// Mobile menu toggle
+document.querySelector(".mobile-menu").addEventListener("click", function() {
+    document.querySelector("nav").classList.toggle("active");
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", function() {
+        document.querySelector("nav").classList.remove("active");
+    });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener("click", function(event) {
+    const nav = document.querySelector("nav");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    
+    if (!nav.contains(event.target) && !mobileMenu.contains(event.target) && nav.classList.contains("active")) {
+        nav.classList.remove("active");
+    }
+});
 
 // Handle admin login
 function handleAdminLogin(event) {
@@ -232,6 +262,55 @@ function handleAdminLogin(event) {
         alert("Invalid admin credentials. Please try again.");
     }
 }
+// Event Listeners - UPDATED WITH NULL CHECKS
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOM loaded, attaching event listeners...");
+    
+    // Initialize authentication state first
+    initAuthState();
+
+    // Attach form event listeners
+    if (loginForm) {
+        loginForm.addEventListener("submit", handleLogin);
+        console.log("Login form listener attached");
+    } else {
+        console.error("Login form not found");
+    }
+
+    if (signupForm) {
+        signupForm.addEventListener("submit", handleSignup);
+        console.log("Signup form listener attached");
+    } else {
+        console.error("Signup form not found");
+    }
+
+    if (adminLoginForm) {
+        adminLoginForm.addEventListener("submit", handleAdminLogin);
+        console.log("Admin login form listener attached");
+    }
+
+    // Button event listeners
+    if (loginBtn) {
+        loginBtn.addEventListener("click", () => {
+            console.log("Login button clicked");
+            authModal.style.display = "block";
+            switchTab("login");
+        });
+    }
+
+    if (adminLoginBtn) {
+        adminLoginBtn.addEventListener("click", () => {
+            console.log("Admin login button clicked");
+            adminModal.style.display = "block";
+        });
+    }
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", handleLogout);
+    }
+
+    // Other existing event listeners...
+});
 
 // Handle logout
 function handleLogout() {
@@ -266,6 +345,40 @@ authTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
         switchTab(tab.dataset.tab);
     });
+});
+// Wrap event listeners in null checks
+if (loginBtn) {
+    loginBtn.addEventListener("click", () => {
+        authModal.style.display = "block";
+        switchTab("login");
+    });
+}
+
+if (adminLoginBtn) {
+    adminLoginBtn.addEventListener("click", () => {
+        adminModal.style.display = "block";
+    });
+}
+
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", handleLogout);
+}
+
+// Add null check for userAvatar click
+if (userAvatar) {
+    userAvatar.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("active");
+    });
+}
+// Make sure this is called when DOM is loaded
+document.addEventListener("DOMContentLoaded", function () {
+    // Your existing DOMContentLoaded code...
+    
+    // Initialize authentication state
+    initAuthState();
+    
+    // Trigger the scroll event to check initial positions
+    window.dispatchEvent(new Event("scroll"));
 });
 
 switchToSignup.addEventListener("click", (e) => {
