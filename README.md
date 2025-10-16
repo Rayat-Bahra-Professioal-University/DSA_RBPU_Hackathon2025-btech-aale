@@ -10,6 +10,15 @@
 - *NIKHIL KUMAR – [ROLE: COORDINATOR /RESPONSIBILITY: CORDINATE TASK,WRITE DOCS,MANAGE PROJECT AND TESTING TOOLS]*
 
 ---
+FOR ADMIN ACCESS in Admin Tab:
+
+ADMIN NAME = admin , PASSWORD = admin123
+
+ADMIN NAME = vansh , PASSWORD = team-btech aale
+
+ADMIN NAME = citycare , PASSWORD = citycare2024
+
+ADMIN NAME = administrator , PASSWORD = admin@123
 
 ---
 
@@ -21,6 +30,8 @@
 - *they can share live location of the area with issues.*
 - *they can track the procedure of the issue resolving.*
 - *Admins can update the status of issues (resolved , in-progress , accept/reject).*
+- *RESPONSIVE DESIGN FOR MOBILE AND PC.*
+- *10 language support for AI chat bot.*
 
 ### *FEATURES FOR CITIZENS:*
 
@@ -187,6 +198,6 @@
 
 ## *📚 References*
 
-1. *My Civic by Tyler Technologies – Mobile app platform connecting citizens with city services and feedback systems. [Link](https://vansh17vansh.pythonanywhere.com/)*
-    1. *Citycare by Baseline – Citizen-centric municipal software for managing requests, sanitation, and municipal operations. [Link](https://vansh17vansh.pythonanywhere.com/)*
-2. *Urban Smart Citizen Engagement Platforms – Platforms using IoT and AI to improve urban services, citizen engagement, and sustainability. [Link](https://vansh17vansh.pythonanywhere.com/)*
+1. *My Civic by Tyler Technologies – Mobile app platform connecting citizens with city services and feedback systems. [Link](https://teambtechaale.pythonanywhere.com/)*
+    1. *CityCare by Baseline – Citizen-centric municipal software for managing requests, sanitation, and municipal operations. [Link](https://teambtechaale.pythonanywhere.com/)*
+2. *Urban Smart Citizen Engagement Platforms – Platforms using IoT and AI to improve urban services, citizen engagement, and sustainability. [Link](https://teambtechaale.pythonanywhere.com/)*
